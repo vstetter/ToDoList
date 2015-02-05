@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyToDoList</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles.css">
+  <script type="html/template" id="toDoTmpl">
+  <article data-toDoid="<%= _id %>">
+    <p><%= toDoItem %></p>
+    <button class = "deleteItem">Delete</button> | <button class= "showEditToDoItem">Edit</button>
+    <form class = "editToDoItem" action="">
+      <input type="text" class="form-control" name ="editItem" value="<%= toDoItem %>">
+      <button type="submit" class="btn btn-primary">Edit to Do</button>
+    </form>
+
+  </article>
+
+
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1>To dos</h1>
+  </header>
+
+  <div class="container">
+    <div class="row">
+
+
+      <section class="formCreateItem">
+        <form id="createItem" action="">
+          <input type="text" class="form-control" name="newItem">
+          <button type="submit" class="btn btn-primary">Add to do</button>
+        </form>
+      </section>
+
+      <section class="ActualList">
+
+        <article>
+          <p></p>
+        </article>
+
+      </section>
+
+      <div class="navbar">
+        <ul>
+          <li>All</li>
+          <li>Active</li>
+          <li>Completed</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
