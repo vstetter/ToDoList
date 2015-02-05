@@ -23,7 +23,7 @@ var toDoList = {
 
     $('.ActualList').on('submit','.editToDoItem', function (event) {
       event.preventDefault();
-      var toDoID = $(this).closest('article').data('toDoid');
+      var toDoID = $(this).closest('article').data('todoid');
       var editedToDoItem = {
         toDoItem: $(this).find('input[name="editItem"]').val()
       };
@@ -42,7 +42,7 @@ var toDoList = {
 
     $('.ActualList').on('click', '.deleteItem', function (event) {
       event.preventDefault();
-      var toDoID = $(this).closest('article').data('toDoid');
+      var toDoID = $(this).closest('article').data('todoid');
       console.log(toDoID);
       toDoList.deletetoDoListItem(toDoID);
     });

@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title>MyToDoList</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
   <script type="html/template" id="toDoTmpl">
-  <article data-toDoid="<%= _id %>">
-    <p><%= toDoItem %></p>
-    <button class = "deleteItem">Delete</button> | <button class= "showEditToDoItem">Edit</button>
+  <article data-todoid="<%= _id %>">
+    <p><input type="checkbox" name'"completed">
+    <%= toDoItem %>
+    <button class = "deleteItem btn btn-default">Delete</button>  <button class= "showEditToDoItem btn btn-default">Edit</button>
+    </p>
     <form class = "editToDoItem" action="">
       <input type="text" class="form-control" name ="editItem" value="<%= toDoItem %>">
-      <button type="submit" class="btn btn-primary">Edit to Do</button>
+      <button type="submit" class="btn btn-default">Edit to Do</button>
     </form>
-
   </article>
 
 
@@ -32,8 +34,10 @@
 
       <section class="formCreateItem">
         <form id="createItem" action="">
+        <p>
           <input type="text" class="form-control" name="newItem">
-          <button type="submit" class="btn btn-primary">Add to do</button>
+          <button type="submit" class="btn btn-default">Add to do</button>
+        </p>
         </form>
       </section>
 
